@@ -33,4 +33,4 @@ _If you run into any issues or have questions, ideas or concerns. Please contact
 
 *MIT*
 
-Copyright (c) 2019 **_YJasmine Lee and Theary Im_**
+Copyright (c) 2019 **_Jasmine Lee and Theary Im_**
