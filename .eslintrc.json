@@ -15,6 +15,11 @@
         "react"
     ],
     "rules": {
+        "react/jsx-handler-names": 2,
+        "react/require-render-return": 2,
+        "react/no-unused-state": 2,
+        "react/prefer-stateless-function": 2,
+        "react/no-direct-mutation-state": 2,
         "react/jsx-key": 2,
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2,
@@ -22,30 +27,30 @@
         "react/jsx-no-undef": 2,
         "react/no-multi-comp": 2,
         "react/jsx-indent-props": [
-          "error",
-          2
-        ],
+            "error",
+            2
+          ],
         "react/jsx-pascal-case": 2,
         "react/prop-types": 2,
         "react/jsx-indent": [
-          "error",
-          2
-        ],
+            "error",
+            2
+          ],
         "indent": [
-          "error",
-          2
+            "error",
+            2
         ],
         "linebreak-style": [
-          "error",
-          "unix"
+            "error",
+            "unix"
         ],
         "quotes": [
-          "error",
-          "single"
+            "error",
+            "single"
         ],
         "semi": [
-          "error",
-          "always"
+            "error",
+            "always"
         ]
     }
 }
