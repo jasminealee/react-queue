@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from './Header';
 import TicketList from './TicketList';
@@ -9,12 +8,13 @@ import Moment from 'moment';
 import Admin from './Admin';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import c from './../constants';
 
 class App extends React.Component {
 
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
-    this.updateTicketElapsedWaitTime(),
+      this.updateTicketElapsedWaitTime(),
     60000
     );
   }
@@ -29,7 +29,7 @@ class App extends React.Component {
       const ticket = this.props.masterTicketList[ticketId];
       const newFormattedWaitTime = ticket.timeOpen.fromNow(true);
       const action = {
-        type: 'UPDATE_TIME',
+        type: c.UPDATE_TIME,
         id: ticketId,
         formattedWaitTime: newFormattedWaitTime
       };
@@ -52,14 +52,14 @@ class App extends React.Component {
   }
 }
 
-  App.propTypes = {
-    masterTicketList: PropTypes.object
-  };
+App.propTypes = {
+  masterTicketList: PropTypes.object
+};
 
-  const mapStateToProps = state => {
-    return {
-      masterTicketList: state.masterTicketList
-    };
+const mapStateToProps = state => {
+  return {
+    masterTicketList: state.masterTicketList
   };
+};
 
 export default withRouter(connect(mapStateToProps)(App));
